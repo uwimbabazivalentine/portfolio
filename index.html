@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<header>
+  <!-- Basic SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uwimbabazi Valentine | Full Stack Web Developer Portfolio</title>
+  <meta name="description" content="I'm Uwimbabazi Valentine, a creative and passionate Full Stack Web Developer specialized in modern web technologies, UI/UX design, and software development. Explore my projects and skills." />
+  <meta name="keywords" content="Uwimbabazi Valentine, Valentine Uwimbabazi, female web developer, Rwandan web developer, full stack developer, frontend developer, backend developer, software engineer, portfolio website, JavaScript, React, Node.js, Python" />
+  <meta name="author" content="Uwimbabazi Valentine" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://uwimbabazivalentine.github.io/portfolio" />
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Uwimbabazi Valentine | Full Stack Web Developer" />
+  <meta property="og:description" content="Explore the portfolio of Uwimbabazi Valentine, a talented Full Stack Web & Software Developer. View projects, skills, and contact details." />
+  <meta property="og:url" content="https://uwimbabazivalentine.github.io/portfolio" />
+  <meta property="og:image" content="https://uwimbabazivalentine.github.io/portfolio/assets/preview-image.jpg" />
+  <meta property="og:site_name" content="Uwimbabazi Valentine Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Uwimbabazi Valentine | Full Stack Web Developer" />
+  <meta name="twitter:description" content="Creative, passionate, and professional web developer building stunning, modern, and responsive websites." />
+  <meta name="twitter:image" content="https://uwimbabazivalentine.github.io/portfolio/assets/preview-image.jpg" />
+
+
+  <!-- favicon -->
+ <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+  <!-- manifest link -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Structured Data (Schema.org for Google Rich Results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Uwimbabazi Valentine",
+    "jobTitle": "Full Stack Web Developer",
+    "url": "https://uwimbabazivalentine.github.io/portfolio",
+    "image": "https://uwimbabazivalentine.github.io/portfolio/assets/profile.jpg",
+    "sameAs": [
+      "https://github.com/uwimbabazivalentine",
+      "https://linkedin.com/in/uwimbabazivalentine",
+      "https://twitter.com/uwimbabaziv"
+    ],
+    "description": "Creative and professional Full Stack Developer specializing in modern web and software development."
+  }
+  </script>
+
+  <!-- Performance Optimizations -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Tailwind and Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#8B5CF6',
+secondary: '#EC4899'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Inter', sans-serif;
+line-height: 1.6;
+transition: all 0.3s ease;
+}
+.dark {
+background: linear-gradient(135deg, #0F0C29 0%, #24243e 50%, #302b63 100%);
+color: #ffffff;
+}
+.light {
+background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+color: #1f2937;
+}
+.glass {
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark .glass {
+background: rgba(255, 255, 255, 0.05);
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.typewriter {
+border-right: 2px solid;
+animation: blink 1s infinite;
+}
+@keyframes blink {
+0%, 50% { border-color: transparent; }
+51%, 100% { border-color: currentColor; }
+}
+.fade-in {
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.6s ease;
+}
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.skill-bar {
+width: 0%;
+transition: width 1.5s ease-in-out;
+}
+.skill-bar.animate {
+width: var(--skill-width);
+}
+.floating {
+animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-20px); }
+}
+.glow-hover:hover {
+box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+transform: translateY(-5px);
+}
+.neon-hover:hover {
+text-shadow: 0 0 10px currentColor;
+}
+.gradient-text {
+background: linear-gradient(45deg, #8B5CF6, #EC4899, #06B6D4);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.nav-sticky {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+transition: all 0.3s ease;
+}
+.theme-toggle {
+width: 60px;
+height: 30px;
+background: linear-gradient(45deg, #8B5CF6, #EC4899);
+border-radius: 15px;
+position: relative;
+cursor: pointer;
+transition: all 0.3s ease;
+overflow: hidden;
+}
+.theme-toggle::before {
+content: '';
+position: absolute;
+width: 26px;
+height: 26px;
+background: white;
+border-radius: 50%;
+top: 2px;
+left: 2px;
+transition: all 0.3s ease;
+box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.dark .theme-toggle::before {
+transform: translateX(30px);
+}
+.theme-icon {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+font-size: 14px;
+color: #666;
+transition: all 0.3s ease;
+z-index: 1;
+}
+.theme-icon.sun {
+left: 8px;
+opacity: 0;
+}
+.theme-icon.moon {
+right: 8px;
+opacity: 1;
+}
+.dark .theme-icon.sun {
+opacity: 0;
+}
+.dark .theme-icon.moon {
+opacity: 1;
+}
+.light .theme-icon.sun {
+opacity: 1;
+}
+.light .theme-icon.moon {
+opacity: 0;
+}
+.light .theme-toggle::before {
+transform: translateX(0px);
+}
+.nav-scrolled {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(20px);
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.nav-scrolled .nav-link {
+color: #1f2937 !important;
+}
+.nav-scrolled .gradient-text {
+background: linear-gradient(45deg, #8B5CF6, #EC4899);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.nav-hero .nav-link {
+color: white !important;
+}
+.mobile-menu-bg {
+background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #06B6D4 100%);
+}
+.scroll-to-top {
+position: fixed;
+bottom: 30px;
+right: 30px;
+width: 50px;
+height: 50px;
+background: linear-gradient(45deg, #8B5CF6, #EC4899);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+cursor: pointer;
+opacity: 0;
+visibility: hidden;
+transform: translateY(20px);
+transition: all 0.3s ease;
+z-index: 1000;
+box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+}
+.scroll-to-top.visible {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+.scroll-to-top:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 30px rgba(139, 92, 246, 0.5);
+}
+.code-preview {
+background: #1e1e2e;
+border-radius: 10px;
+padding: 20px;
+font-family: 'Fira Code', monospace;
+color: #a6e3a1;
+font-size: 14px;
+line-height: 1.6;
+overflow-x: auto;
+margin: 20px 0;
+}
+.typing-code {
+border-right: 2px solid #a6e3a1;
+animation: blink 1s infinite;
+}
+.process-step {
+opacity: 0;
+transform: translateX(-30px);
+transition: all 0.6s ease;
+}
+.process-step.visible {
+opacity: 1;
+transform: translateX(0);
+}
+.process-step:nth-child(even) {
+transform: translateX(30px);
+}
+.process-step:nth-child(even).visible {
+transform: translateX(0);
+}
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.8);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 2000;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+}
+.modal.active {
+opacity: 1;
+visibility: visible;
+}
+.modal-content {
+max-width: 90vw;
+max-height: 90vh;
+position: relative;
+transform: scale(0.8);
+transition: transform 0.3s ease;
+}
+.modal.active .modal-content {
+transform: scale(1);
+}
+.modal-close {
+position: absolute;
+top: -40px;
+right: 0;
+background: white;
+color: black;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+font-weight: bold;
+}
+.project-screenshots {
+display: grid;
+grid-template-columns: 1fr;
+gap: 20px;
+background: white;
+padding: 30px;
+border-radius: 20px;
+max-height: 80vh;
+overflow-y: auto;
+}
+.screenshot-item {
+text-align: center;
+}
+.screenshot-item img {
+width: 100%;
+max-width: 600px;
+border-radius: 10px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+margin-bottom: 10px;
+}
+.screenshot-item h4 {
+color: #333;
+font-weight: bold;
+margin-bottom: 5px;
+}
+.screenshot-item p {
+color: #666;
+font-size: 14px;
+}
+.timeline-item:nth-child(even) {
+flex-direction: row-reverse;
+}
+.project-card:hover .project-overlay {
+opacity: 1;
+}
+.testimonial-card {
+opacity: 0;
+transform: scale(0.9);
+transition: all 0.5s ease;
+}
+.testimonial-card.active {
+opacity: 1;
+transform: scale(1);
+}
+.mobile-menu {
+transform: translateX(-100%);
+transition: transform 0.3s ease;
+}
+.mobile-menu.active {
+transform: translateX(0);
+}
+.hamburger span {
+display: block;
+width: 25px;
+height: 3px;
+background: currentColor;
+margin: 5px 0;
+transition: 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+transform: rotate(-45deg) translate(7px, -6px);
+}
+.slide-up {
+opacity: 0;
+transform: translateY(50px);
+transition: all 0.8s ease;
+}
+.slide-up.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.slide-left {
+opacity: 0;
+transform: translateX(-50px);
+transition: all 0.8s ease;
+}
+.slide-left.visible {
+opacity: 1;
+transform: translateX(0);
+}
+.slide-right {
+opacity: 0;
+transform: translateX(50px);
+transition: all 0.8s ease;
+}
+.slide-right.visible {
+opacity: 1;
+transform: translateX(0);
+}
+.scale-in {
+opacity: 0;
+transform: scale(0.8);
+transition: all 0.8s ease;
+}
+.scale-in.visible {
+opacity: 1;
+transform: scale(1);
+}
+
+
+
+section h2{
+  padding-bottom: 20px;
+}
+</style>
+</header>
+<body class="light min-h-screen">
+<nav class="nav-sticky nav-hero glass p-4" id="navbar">
+<div class="max-w-6xl mx-auto flex items-center justify-between">
+<div class="font-['Pacifico'] text-2xl gradient-text">Vale</div>
+<div class="hidden md:flex space-x-8">
+<a href="#home" class="nav-link hover:text-primary transition-colors">Home</a>
+<a href="#about" class="nav-link hover:text-primary transition-colors">About</a>
+<a href="#skills" class="nav-link hover:text-primary transition-colors">Skills</a>
+<a href="#services" class="nav-link hover:text-primary transition-colors">Services</a>
+<a href="#projects" class="nav-link hover:text-primary transition-colors">Projects</a>
+<a href="#experience" class="nav-link hover:text-primary transition-colors">Experience</a>
+<a href="#process" class="nav-link hover:text-primary transition-colors">Process</a>
+<a href="#tools" class="nav-link hover:text-primary transition-colors">Tools</a>
+<a href="#code" class="nav-link hover:text-primary transition-colors">Code</a>
+<a href="#contact" class="nav-link hover:text-primary transition-colors">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="theme-toggle" onclick="toggleTheme()">
+<i class="theme-icon sun ri-sun-line"></i>
+<i class="theme-icon moon ri-moon-line"></i>
+</div>
+<button class="md:hidden hamburger" onclick="toggleMobileMenu()">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
+<div class="mobile-menu fixed top-0 left-0 w-full h-screen mobile-menu-bg md:hidden z-50">
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 flex items-center justify-center text-white text-2xl" onclick="toggleMobileMenu()">
+<i class="ri-close-line"></i>
+</button>
+</div>
+<div class="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
+<a href="#home" class="text-white hover:text-yellow-200 transition-colors" onclick="toggleMobileMenu()">Home</a>
+<a href="#about" class="text-white hover:text-yellow-200 transition-colors" onclick="toggleMobileMenu()">About</a>
+<a href="#skills" class="text-white hover:text-yellow-200 transition-colors" onclick="toggleMobileMenu()">Skills</a>
+<a href="#services" class="text-white hover:text-yellow-200 transition-colors" onclick="toggleMobileMenu()">Services</a>
+<a href="#projects" class="text-white hover:text-yellow-200 transition-colors" onclick="toggleMobileMenu()">Projects</a>
+<a href="#experience" class="text-white hover:text-yellow-200 transition-colors" onclick="toggleMobileMenu()">Experience</a>
+<a href="#process" class="text-white hover:text-yellow-200 transition-colors" onclick="toggleMobileMenu()">Process</a>
+<a href="#tools" class="text-white hover:text-yellow-200 transition-colors" onclick="toggleMobileMenu()">Tools</a>
+<a href="#code" class="text-white hover:text-yellow-200 transition-colors" onclick="toggleMobileMenu()">Code</a>
+<a href="#contact" class="text-white hover:text-yellow-200 transition-colors" onclick="toggleMobileMenu()">Contact</a>
+</div>
+</div>
+</nav>
+<section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+style="background-image: url('https://readdy.ai/api/search-image?query=modern%20professional%20studio%20setup%20with%20purple%20and%20pink%20ambient%20lighting%2C%20sleek%20desk%20with%20multiple%20monitors%2C%20contemporary%20workspace%20with%20floating%20geometric%20shapes%2C%20professional%20photography%20studio%20background%2C%20high-tech%20environment%20with%20gradient%20lighting%20effects&width=1920&height=1080&seq=hero-studio-bg&orientation=landscape'); background-size: cover; background-position: center; background-attachment: fixed; padding-bottom: 100px;">
+<div class="absolute inset-0 bg-black bg-opacity-40"></div>
+<div class="absolute inset-0 opacity-20">
+<div class="floating absolute top-32 left-32 w-32 h-32 bg-primary rounded-full blur-sm"></div>
+<div class="floating absolute top-20 right-20 w-28 h-28 bg-secondary rounded-lg blur-sm" style="animation-delay: -2s;"></div>
+<div class="floating absolute bottom-40 left-1/4 w-24 h-24 bg-blue-400 rounded-full blur-sm" style="animation-delay: -4s;"></div>
+<div class="floating absolute top-1/2 right-1/3 w-20 h-20 bg-pink-400 rounded-lg blur-sm" style="animation-delay: -1s;"></div>
+<div class="floating absolute bottom-20 right-20 w-16 h-16 bg-cyan-400 rounded-full blur-sm" style="animation-delay: -3s;"></div>
+</div>
+<div class="text-center z-10 fade-in max-w-6xl mx-auto px-8">
+<div class="w-80 h-80 mx-auto mb-12 relative" style="margin-top: 90px;">
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-blue-500 rounded-full animate-pulse opacity-75"></div>
+<div class="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl transform hover:scale-105 transition-all">
+<img src="Public/Images/vale.png"
+alt="Vale Profile" class="w-full h-full object-cover">
+</div>
+</div>
+<h1 class="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 text-white leading-tight drop-shadow-2xl font-['Pacifico']">
+Vale <span class="gradient-text">Developer</span>
+</h1>
+<div class="text-2xl md:text-3xl lg:text-4xl mb-12 h-16 text-white">
+<span id="typewriter" class="typewriter drop-shadow-lg"></span>
+</div>
+<p class="text-lg md:text-xl lg:text-2xl mb-12 max-w-4xl mx-auto text-white opacity-90 leading-relaxed drop-shadow-lg">
+Crafting exceptional digital experiences through innovative full-stack development.
+Specializing in modern web technologies with a passion for clean code and stunning user interfaces.
+</p>
+<div class="flex justify-center space-x-6 mb-12">
+<a href="#" class="w-16 h-16 flex items-center justify-center bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-white neon-hover transition-all transform hover:scale-110 hover:bg-opacity-20">
+<i class="ri-github-fill text-2xl"></i>
+</a>
+<a href="#" class="w-16 h-16 flex items-center justify-center bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-white neon-hover transition-all transform hover:scale-110 hover:bg-opacity-20">
+<i class="ri-linkedin-fill text-2xl"></i>
+</a>
+<a href="#" class="w-16 h-16 flex items-center justify-center bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-white neon-hover transition-all transform hover:scale-110 hover:bg-opacity-20">
+<i class="ri-twitter-fill text-2xl"></i>
+</a>
+<a href="#" class="w-16 h-16 flex items-center justify-center bg-white bg-opacity-10 backdrop-blur-sm rounded-full text-white neon-hover transition-all transform hover:scale-110 hover:bg-opacity-20">
+<i class="ri-mail-fill text-2xl"></i>
+</a>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-gradient-to-r from-primary to-secondary text-white px-10 py-4 !rounded-button font-semibold glow-hover transition-all whitespace-nowrap text-lg transform hover:scale-105 shadow-xl">
+<i class="ri-eye-line mr-2"></i> <a href="">View My Work</a> 
+</button>
+<button 
+  onclick="downloadCV()" 
+  class="bg-white bg-opacity-10 backdrop-blur-sm text-white px-10 py-4 !rounded-button font-semibold transition-all whitespace-nowrap text-lg transform hover:scale-105 hover:bg-opacity-20 border border-white border-opacity-30">
+  <i class="ri-download-line mr-2"></i>Download CV
+</button>
+
+<script>
+  function downloadCV() {
+    const fileUrl = '/home/chre/Downloads/Public/CV/Uwimbabazi_Valentine_Web_Developer_CV.pdf';
+    
+    // Create a hidden link
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = 'Uwimbabazi_Valentine_Web_Developer_CV.pdf';
+    link.target = '_blank'; // open in new tab
+    document.body.appendChild(link);
+    
+    // Trigger click
+    link.click();
+    
+    // Remove link
+    document.body.removeChild(link);
+  }
+</script>
+
+</div>
+</div>
+</section>
+<section id="about" class="py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-6xl md:text-7xl font-bold text-center mb-24 gradient-text fade-in">About Me</h2>
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div class="fade-in">
+<img src="Public/Images/vale-stu.png"
+alt="Vale Workspace" class="rounded-3xl shadow-2xl w-full">
+</div>
+<div class="glass p-12 rounded-3xl fade-in">
+<h3 class="text-4xl font-bold mb-8 gradient-text">Hi, I'm Vale!</h3>
+<p class="text-xl mb-8 opacity-90 leading-relaxed">
+I'm a passionate full-stack developer with over 5 years of experience creating digital experiences that matter.
+I specialize in modern web technologies and love turning complex problems into simple, beautiful solutions.
+</p>
+<p class="text-xl mb-8 opacity-90 leading-relaxed">
+My journey in tech started with a curiosity about how things work, and it has evolved into a career
+dedicated to building applications that make a real difference in people's lives.
+</p>
+<p class="text-xl mb-10 opacity-90 leading-relaxed">
+When I'm not coding, you'll find me exploring the latest tech trends, mentoring aspiring developers,
+or working on open-source projects that push the boundaries of what's possible on the web.
+</p>
+<div class="grid grid-cols-3 gap-8">
+<div class="text-center">
+<div class="text-5xl font-bold gradient-text mb-2">50+</div>
+<div class="text-lg opacity-70">Projects Completed</div>
+</div>
+<div class="text-center">
+<div class="text-5xl font-bold gradient-text mb-2">5+</div>
+<div class="text-lg opacity-70">Years Experience</div>
+</div>
+<div class="text-center">
+<div class="text-5xl font-bold gradient-text mb-2">25+</div>
+<div class="text-lg opacity-70">Happy Clients</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="skills" class="py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-6xl md:text-7xl font-bold text-center mb-24 gradient-text fade-in">Skills & Expertise</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
+<div class="glass p-10 rounded-3xl fade-in skill-card transform hover:scale-105 transition-all">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 flex items-center justify-center mr-6 bg-gradient-to-r from-orange-400 to-orange-600 rounded-2xl">
+<i class="ri-html5-fill text-4xl text-white"></i>
+</div>
+<span class="font-bold text-2xl">HTML5</span>
+<span class="ml-auto text-xl opacity-70 font-semibold">95%</span>
+</div>
+<div class="bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-4">
+<div class="skill-bar bg-gradient-to-r from-orange-400 to-orange-600 h-4 rounded-full" style="--skill-width: 95%"></div>
+</div>
+<p class="text-lg opacity-80">Expert in semantic markup, accessibility, and modern HTML5 APIs for building robust web foundations.</p>
+</div>
+<div class="glass p-10 rounded-3xl fade-in skill-card transform hover:scale-105 transition-all">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 flex items-center justify-center mr-6 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl">
+<i class="ri-css3-fill text-4xl text-white"></i>
+</div>
+<span class="font-bold text-2xl">CSS3</span>
+<span class="ml-auto text-xl opacity-70 font-semibold">90%</span>
+</div>
+<div class="bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-4">
+<div class="skill-bar bg-gradient-to-r from-blue-400 to-blue-600 h-4 rounded-full" style="--skill-width: 90%"></div>
+</div>
+<p class="text-lg opacity-80">Advanced CSS3, Flexbox, Grid, animations, and responsive design for stunning user interfaces.</p>
+</div>
+<div class="glass p-10 rounded-3xl fade-in skill-card transform hover:scale-105 transition-all">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 flex items-center justify-center mr-6 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl">
+<i class="ri-javascript-fill text-4xl text-white"></i>
+</div>
+<span class="font-bold text-2xl">JavaScript</span>
+<span class="ml-auto text-xl opacity-70 font-semibold">88%</span>
+</div>
+<div class="bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-4">
+<div class="skill-bar bg-gradient-to-r from-yellow-400 to-yellow-600 h-4 rounded-full" style="--skill-width: 88%"></div>
+</div>
+<p class="text-lg opacity-80">Proficient in modern JavaScript, ES6+, DOM manipulation, and asynchronous programming.</p>
+</div>
+<div class="glass p-10 rounded-3xl fade-in skill-card transform hover:scale-105 transition-all">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 flex items-center justify-center mr-6 bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-2xl">
+<i class="ri-reactjs-fill text-4xl text-white"></i>
+</div>
+<span class="font-bold text-2xl">React</span>
+<span class="ml-auto text-xl opacity-70 font-semibold">85%</span>
+</div>
+<div class="bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-4">
+<div class="skill-bar bg-gradient-to-r from-cyan-400 to-cyan-600 h-4 rounded-full" style="--skill-width: 85%"></div>
+</div>
+<p class="text-lg opacity-80">Expert in React ecosystem, hooks, state management, and building scalable component architectures.</p>
+</div>
+<div class="glass p-10 rounded-3xl fade-in skill-card transform hover:scale-105 transition-all">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 flex items-center justify-center mr-6 bg-gradient-to-r from-green-400 to-green-600 rounded-2xl">
+<i class="ri-nodejs-fill text-4xl text-white"></i>
+</div>
+<span class="font-bold text-2xl">Node.js</span>
+<span class="ml-auto text-xl opacity-70 font-semibold">80%</span>
+</div>
+<div class="bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-4">
+<div class="skill-bar bg-gradient-to-r from-green-400 to-green-600 h-4 rounded-full" style="--skill-width: 80%"></div>
+</div>
+<p class="text-lg opacity-80">Server-side development with Express.js, API design, database integration, and microservices.</p>
+</div>
+<div class="glass p-10 rounded-3xl fade-in skill-card transform hover:scale-105 transition-all">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 flex items-center justify-center mr-6 bg-gradient-to-r from-purple-400 to-purple-600 rounded-2xl">
+<i class="ri-database-fill text-4xl text-white"></i>
+</div>
+<span class="font-bold text-2xl">Python</span>
+<span class="ml-auto text-xl opacity-70 font-semibold">75%</span>
+</div>
+<div class="bg-gray-200 dark:bg-gray-700 rounded-full h-4 mb-4">
+<div class="skill-bar bg-gradient-to-r from-purple-400 to-purple-600 h-4 rounded-full" style="--skill-width: 75%"></div>
+</div>
+<p class="text-lg opacity-80">Backend development with Django/Flask, data analysis, automation, and machine learning integration.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="services" class="py-20 px-4">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-4xl font-bold text-center mb-16 gradient-text fade-in">Services</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="glass p-8 rounded-2xl text-center glow-hover transition-all fade-in">
+<div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center">
+<i class="ri-code-s-slash-line text-2xl text-white"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Web Development</h3>
+<p class="opacity-80 mb-6">
+Full-stack web applications using modern frameworks and technologies.
+Responsive, fast, and user-friendly solutions.
+</p>
+<div class="text-2xl font-bold gradient-text mb-4">Starting at $2,500</div>
+<button class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 !rounded-button font-semibold transition-all whitespace-nowrap">
+Learn More
+</button>
+</div>
+<div class="glass p-8 rounded-2xl text-center glow-hover transition-all fade-in">
+<div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-secondary to-pink-500 rounded-full flex items-center justify-center">
+<i class="ri-palette-line text-2xl text-white"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
+<p class="opacity-80 mb-6">
+Beautiful and intuitive user interfaces that provide exceptional user experiences
+across all devices and platforms.
+</p>
+<div class="text-2xl font-bold gradient-text mb-4">Starting at $1,800</div>
+<button class="bg-gradient-to-r from-secondary to-pink-500 text-white px-6 py-2 !rounded-button font-semibold transition-all whitespace-nowrap">
+Learn More
+</button>
+</div>
+<div class="glass p-8 rounded-2xl text-center glow-hover transition-all fade-in">
+<div class="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+<i class="ri-settings-3-line text-2xl text-white"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">API Integration</h3>
+<p class="opacity-80 mb-6">
+Seamless integration of third-party APIs and custom backend solutions
+to enhance your application's functionality.
+</p>
+<div class="text-2xl font-bold gradient-text mb-4">Starting at $1,200</div>
+<button class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-2 !rounded-button font-semibold transition-all whitespace-nowrap">
+Learn More
+</button>
+</div>
+</div>
+</div>
+</section>
+<section id="projects" class="py-20 px-4">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-4xl font-bold text-center mb-16 gradient-text fade-in">Featured Projects</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="glass rounded-2xl overflow-hidden project-card transition-all fade-in">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=modern%20e-commerce%20website%20interface%20showing%20product%20catalog%20with%20purple%20and%20pink%20gradient%20design%2C%20clean%20layout%2C%20shopping%20cart%20functionality%2C%20responsive%20design%2C%20professional%20web%20application%20screenshot&width=400&height=250&seq=project-ecommerce&orientation=landscape"
+alt="E-commerce Platform" class="w-full h-48 object-cover object-top">
+<div class="project-overlay absolute inset-0 bg-black bg-opacity-80 opacity-0 transition-opacity flex items-center justify-center space-x-4">
+<button class="bg-white text-black px-4 py-2 !rounded-button font-semibold whitespace-nowrap" onclick="openProjectModal('ecommerce')">View Live</button>
+<button class="bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 !rounded-button font-semibold whitespace-nowrap">GitHub</button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+<p class="opacity-80 mb-4 text-sm">
+Full-featured online store with payment integration, inventory management, and admin dashboard.
+</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-1 rounded text-xs">React</span>
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-1 rounded text-xs">Node.js</span>
+<span class="bg-primary bg-opacity-20 text-primary px-2 py-1 rounded text-xs">MongoDB</span>
+</div>
+</div>
+</div>
+<div class="glass rounded-2xl overflow-hidden project-card transition-all fade-in">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=task%20management%20application%20interface%20with%20kanban%20board%20layout%2C%20colorful%20task%20cards%2C%20drag%20and%20drop%20functionality%2C%20modern%20dashboard%20design%20with%20purple%20accent%20colors%2C%20productivity%20app%20screenshot&width=400&height=250&seq=project-taskmanager&orientation=landscape"
+alt="Task Management App" class="w-full h-48 object-cover object-top">
+<div class="project-overlay absolute inset-0 bg-black bg-opacity-80 opacity-0 transition-opacity flex items-center justify-center space-x-4">
+<button class="bg-white text-black px-4 py-2 !rounded-button font-semibold whitespace-nowrap" onclick="openProjectModal('ecommerce')">View Live</button>
+<button class="bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 !rounded-button font-semibold whitespace-nowrap">GitHub</button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Task Management App</h3>
+<p class="opacity-80 mb-4 text-sm">
+Collaborative project management tool with real-time updates, team collaboration features.
+</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary bg-opacity-20 text-secondary px-2 py-1 rounded text-xs">Vue.js</span>
+<span class="bg-secondary bg-opacity-20 text-secondary px-2 py-1 rounded text-xs">Firebase</span>
+<span class="bg-secondary bg-opacity-20 text-secondary px-2 py-1 rounded text-xs">PWA</span>
+</div>
+</div>
+</div>
+<div class="glass rounded-2xl overflow-hidden project-card transition-all fade-in">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=social%20media%20analytics%20dashboard%20with%20charts%20and%20graphs%2C%20data%20visualization%20interface%2C%20modern%20UI%20design%20with%20gradient%20colors%2C%20social%20media%20metrics%20display%2C%20professional%20analytics%20platform&width=400&height=250&seq=project-analytics&orientation=landscape"
+alt="Analytics Dashboard" class="w-full h-48 object-cover object-top">
+<div class="project-overlay absolute inset-0 bg-black bg-opacity-80 opacity-0 transition-opacity flex items-center justify-center space-x-4">
+<button class="bg-white text-black px-4 py-2 !rounded-button font-semibold whitespace-nowrap" onclick="openProjectModal('ecommerce')">View Live</button>
+<button class="bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 !rounded-button font-semibold whitespace-nowrap">GitHub</button>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-2">Analytics Dashboard</h3>
+<p class="opacity-80 mb-4 text-sm">
+Real-time data visualization platform with interactive charts and comprehensive reporting.
+</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-blue-500 bg-opacity-20 text-blue-500 px-2 py-1 rounded text-xs">D3.js</span>
+<span class="bg-blue-500 bg-opacity-20 text-blue-500 px-2 py-1 rounded text-xs">Python</span>
+<span class="bg-blue-500 bg-opacity-20 text-blue-500 px-2 py-1 rounded text-xs">PostgreSQL</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="experience" class="py-20 px-4">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-4xl font-bold text-center mb-16 gradient-text fade-in">Experience & Education</h2>
+<div class="space-y-8">
+<div class="timeline-item flex items-center gap-8 fade-in">
+<div class="glass p-6 rounded-2xl flex-1">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center mr-4">
+<i class="ri-building-line text-white text-xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-bold">Senior Full Stack Developer</h3>
+<p class="opacity-70">TechCorp Solutions • 2022 - Present</p>
+</div>
+</div>
+<p class="opacity-80">
+Leading development of enterprise web applications, mentoring junior developers,
+and implementing modern development practices across multiple projects.
+</p>
+</div>
+<div class="hidden md:block w-4 h-4 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+</div>
+<div class="timeline-item flex items-center gap-8 fade-in">
+<div class="hidden md:block w-4 h-4 bg-gradient-to-r from-secondary to-pink-500 rounded-full"></div>
+<div class="glass p-6 rounded-2xl flex-1">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-gradient-to-r from-secondary to-pink-500 rounded-full flex items-center justify-center mr-4">
+<i class="ri-code-line text-white text-xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-bold">Frontend Developer</h3>
+<p class="opacity-70">Digital Innovations • 2020 - 2022</p>
+</div>
+</div>
+<p class="opacity-80">
+Developed responsive web applications using React and Vue.js, collaborated with design teams
+to create pixel-perfect user interfaces.
+</p>
+</div>
+</div>
+<div class="timeline-item flex items-center gap-8 fade-in">
+<div class="glass p-6 rounded-2xl flex-1">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4">
+<i class="ri-graduation-cap-line text-white text-xl"></i>
+</div>
+<div>
+<h3 class="text-xl font-bold">Computer Science Degree</h3>
+<p class="opacity-70">University of Technology • 2016 - 2020</p>
+</div>
+</div>
+<p class="opacity-80">
+Bachelor's degree in Computer Science with focus on software engineering,
+web development, and database systems. Graduated Magna Cum Laude.
+</p>
+</div>
+<div class="hidden md:block w-4 h-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<section id="testimonials" class="py-20 px-4">
+<div class="max-w-4xl mx-auto">
+<h2 class="text-4xl font-bold text-center mb-16 gradient-text fade-in">What Clients Say</h2>
+<div class="relative">
+<div class="testimonial-container">
+<div class="testimonial-card active glass p-8 rounded-2xl text-center">
+<div class="w-16 h-16 mx-auto mb-6 rounded-full overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20middle-aged%20businessman%20in%20a%20suit%2C%20confident%20expression%2C%20corporate%20environment%20background%2C%20high%20quality%20portrait%20photography&width=150&height=150&seq=client-1&orientation=squarish"
+alt="Client" class="w-full h-full object-cover">
+</div>
+<p class="text-lg mb-6 opacity-90">
+"Vale delivered an exceptional e-commerce platform that exceeded our expectations.
+Her attention to detail and technical expertise are outstanding."
+</p>
+<h4 class="font-bold">Michael Johnson</h4>
+<p class="opacity-70">CEO, RetailTech</p>
+</div>
+</div>
+<div class="flex justify-center mt-8 space-x-2">
+<button class="testimonial-dot w-3 h-3 rounded-full bg-primary opacity-50 transition-opacity" onclick="showTestimonial(0)"></button>
+<button class="testimonial-dot w-3 h-3 rounded-full bg-primary opacity-30 transition-opacity" onclick="showTestimonial(1)"></button>
+<button class="testimonial-dot w-3 h-3 rounded-full bg-primary opacity-30 transition-opacity" onclick="showTestimonial(2)"></button>
+</div>
+</div>
+</div>
+</section>
+<section id="achievements" class="py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-6xl md:text-7xl font-bold text-center mb-24 gradient-text slide-up">Achievements</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="glass p-8 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+<i class="ri-trophy-fill text-4xl text-white"></i>
+</div>
+<div class="text-4xl font-bold gradient-text mb-2">15+</div>
+<h3 class="text-xl font-bold mb-2">Awards Won</h3>
+<p class="opacity-80">Recognition for excellence in web development and design innovation</p>
+</div>
+<div class="glass p-8 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center">
+<i class="ri-star-fill text-4xl text-white"></i>
+</div>
+<div class="text-4xl font-bold gradient-text mb-2">98%</div>
+<h3 class="text-xl font-bold mb-2">Client Satisfaction</h3>
+<p class="opacity-80">Consistently delivering projects that exceed client expectations</p>
+</div>
+<div class="glass p-8 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center">
+<i class="ri-code-s-slash-fill text-4xl text-white"></i>
+</div>
+<div class="text-4xl font-bold gradient-text mb-2">100K+</div>
+<h3 class="text-xl font-bold mb-2">Lines of Code</h3>
+<p class="opacity-80">Clean, efficient code written across multiple programming languages</p>
+</div>
+<div class="glass p-8 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center">
+<i class="ri-team-fill text-4xl text-white"></i>
+</div>
+<div class="text-4xl font-bold gradient-text mb-2">500+</div>
+<h3 class="text-xl font-bold mb-2">Developers Mentored</h3>
+<p class="opacity-80">Helping the next generation of developers grow their skills</p>
+</div>
+</div>
+</div>
+</section>
+<section id="blog" class="py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-6xl md:text-7xl font-bold text-center mb-24 gradient-text slide-up">Latest Blog Posts</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+<article class="glass rounded-3xl overflow-hidden slide-left hover:scale-105 transition-all">
+<img src="https://readdy.ai/api/search-image?query=modern%20web%20development%20workspace%20with%20code%20on%20screen%2C%20React%20components%20displayed%2C%20purple%20and%20pink%20lighting%2C%20clean%20desk%20setup%2C%20professional%20coding%20environment%2C%20tech%20blog%20article%20illustration&width=400&height=250&seq=blog-react&orientation=landscape"
+alt="React Best Practices" class="w-full h-48 object-cover object-top">
+<div class="p-8">
+<div class="flex items-center mb-4 text-sm opacity-70">
+<i class="ri-calendar-line mr-2"></i>
+<span>March 15, 2025</span>
+<span class="mx-2">•</span>
+<span>5 min read</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">React Best Practices for 2025</h3>
+<p class="opacity-80 mb-6">Discover the latest React patterns and techniques that will make your applications more performant and maintainable.</p>
+<a href="#" class="text-primary hover:text-secondary transition-colors font-semibold">
+Read More <i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</article>
+<article class="glass rounded-3xl overflow-hidden slide-up hover:scale-105 transition-all">
+<img src="https://readdy.ai/api/search-image?query=full%20stack%20development%20illustration%20with%20frontend%20and%20backend%20components%2C%20modern%20tech%20stack%20visualization%2C%20API%20connections%2C%20database%20integration%2C%20professional%20software%20architecture%20diagram&width=400&height=250&seq=blog-fullstack&orientation=landscape"
+alt="Full Stack Development" class="w-full h-48 object-cover object-top">
+<div class="p-8">
+<div class="flex items-center mb-4 text-sm opacity-70">
+<i class="ri-calendar-line mr-2"></i>
+<span>March 10, 2025</span>
+<span class="mx-2">•</span>
+<span>8 min read</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">The Complete Full Stack Developer Roadmap</h3>
+<p class="opacity-80 mb-6">A comprehensive guide to becoming a full stack developer in 2025, covering essential technologies and career paths.</p>
+<a href="#" class="text-primary hover:text-secondary transition-colors font-semibold">
+Read More <i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</article>
+<article class="glass rounded-3xl overflow-hidden slide-right hover:scale-105 transition-all">
+<img src="https://readdy.ai/api/search-image?query=UI%20UX%20design%20process%20illustration%20with%20wireframes%2C%20color%20palettes%2C%20user%20interface%20mockups%2C%20design%20thinking%20methodology%2C%20creative%20workspace%20with%20design%20tools&width=400&height=250&seq=blog-ux&orientation=landscape"
+alt="UI/UX Design Trends" class="w-full h-48 object-cover object-top">
+<div class="p-8">
+<div class="flex items-center mb-4 text-sm opacity-70">
+<i class="ri-calendar-line mr-2"></i>
+<span>March 5, 2025</span>
+<span class="mx-2">•</span>
+<span>6 min read</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">UI/UX Design Trends That Actually Matter</h3>
+<p class="opacity-80 mb-6">Explore the design trends that are shaping user experiences and how to implement them effectively in your projects.</p>
+<a href="#" class="text-primary hover:text-secondary transition-colors font-semibold">
+Read More <i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section id="process" class="py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-6xl md:text-7xl font-bold text-center mb-24 gradient-text slide-up">Development Process</h2>
+<div class="space-y-16">
+<div class="process-step flex items-center gap-12">
+<div class="w-1/2">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-6">
+<i class="ri-lightbulb-line text-3xl text-white"></i>
+</div>
+<div>
+<h3 class="text-3xl font-bold mb-2">Discovery & Planning</h3>
+<p class="text-xl opacity-70">Understanding your vision</p>
+</div>
+</div>
+<p class="text-lg opacity-80 leading-relaxed">
+I start every project by diving deep into your requirements, target audience, and business goals. 
+Through detailed consultations and research, I create a comprehensive project roadmap that ensures we're aligned from day one.
+</p>
+</div>
+<div class="w-1/2">
+<img src="https://readdy.ai/api/search-image?query=project%20planning%20meeting%20with%20wireframes%2C%20user%20personas%2C%20flowcharts%20on%20whiteboard%2C%20collaborative%20planning%20session%2C%20modern%20office%20environment%20with%20purple%20lighting%20accents&width=600&height=350&seq=process-planning&orientation=landscape"
+alt="Planning Process" class="rounded-2xl shadow-2xl w-full">
+</div>
+</div>
+
+<div class="process-step flex items-center gap-12">
+<div class="w-1/2">
+<img src="https://readdy.ai/api/search-image?query=UI%20UX%20design%20process%20with%20sketch%20wireframes%2C%20color%20palettes%2C%20design%20mockups%2C%20prototyping%20tools%2C%20creative%20design%20workspace%20with%20modern%20equipment&width=600&height=350&seq=process-design&orientation=landscape"
+alt="Design Process" class="rounded-2xl shadow-2xl w-full">
+</div>
+<div class="w-1/2">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-6">
+<i class="ri-palette-line text-3xl text-white"></i>
+</div>
+<div>
+<h3 class="text-3xl font-bold mb-2">Design & Prototyping</h3>
+<p class="text-xl opacity-70">Bringing ideas to life</p>
+</div>
+</div>
+<p class="text-lg opacity-80 leading-relaxed">
+Using modern design tools and methodologies, I create detailed wireframes, interactive prototypes, 
+and pixel-perfect designs that prioritize user experience while maintaining visual appeal and brand consistency.
+</p>
+</div>
+</div>
+
+<div class="process-step flex items-center gap-12">
+<div class="w-1/2">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mr-6">
+<i class="ri-code-s-slash-line text-3xl text-white"></i>
+</div>
+<div>
+<h3 class="text-3xl font-bold mb-2">Development & Testing</h3>
+<p class="text-xl opacity-70">Building with precision</p>
+</div>
+</div>
+<p class="text-lg opacity-80 leading-relaxed">
+I transform designs into fully functional applications using cutting-edge technologies. 
+Rigorous testing ensures every feature works flawlessly across different devices and browsers before deployment.
+</p>
+</div>
+<div class="w-1/2">
+<img src="https://readdy.ai/api/search-image?query=software%20development%20process%20with%20multiple%20monitors%20showing%20code%2C%20testing%20environments%2C%20debugging%20tools%2C%20modern%20development%20setup%20with%20purple%20ambient%20lighting&width=600&height=350&seq=process-dev&orientation=landscape"
+alt="Development Process" class="rounded-2xl shadow-2xl w-full">
+</div>
+</div>
+
+<div class="process-step flex items-center gap-12">
+<div class="w-1/2">
+<img src="https://readdy.ai/api/search-image?query=application%20deployment%20and%20launch%20celebration%2C%20team%20monitoring%20server%20performance%2C%20analytics%20dashboards%2C%20successful%20project%20completion%2C%20professional%20tech%20team%20environment&width=600&height=350&seq=process-launch&orientation=landscape"
+alt="Launch Process" class="rounded-2xl shadow-2xl w-full">
+</div>
+<div class="w-1/2">
+<div class="flex items-center mb-6">
+<div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mr-6">
+<i class="ri-rocket-line text-3xl text-white"></i>
+</div>
+<div>
+<h3 class="text-3xl font-bold mb-2">Launch & Support</h3>
+<p class="text-xl opacity-70">Ensuring continued success</p>
+</div>
+</div>
+<p class="text-lg opacity-80 leading-relaxed">
+After successful deployment, I provide ongoing support, performance monitoring, and maintenance. 
+Your project's success doesn't end at launch—I'm here to help it grow and evolve with your needs.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="tools" class="py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-6xl md:text-7xl font-bold text-center mb-24 gradient-text slide-up">Development Tools & Environment</h2>
+<div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+<div class="slide-left">
+<h3 class="text-4xl font-bold mb-8 gradient-text">My Development Setup</h3>
+<p class="text-xl mb-8 opacity-80 leading-relaxed">
+I believe that great tools enable great work. My carefully curated development environment 
+is optimized for productivity, collaboration, and delivering high-quality code.
+</p>
+<div class="space-y-6">
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+<i class="ri-macbook-line text-2xl text-white"></i>
+</div>
+<div>
+<h4 class="text-xl font-bold">MacBook Pro M2</h4>
+<p class="opacity-70">Primary development machine</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+<i class="ri-terminal-box-line text-2xl text-white"></i>
+</div>
+<div>
+<h4 class="text-xl font-bold">VS Code + Extensions</h4>
+<p class="opacity-70">Optimized coding environment</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4">
+<i class="ri-git-branch-line text-2xl text-white"></i>
+</div>
+<div>
+<h4 class="text-xl font-bold">Git + GitHub</h4>
+<p class="opacity-70">Version control & collaboration</p>
+</div>
+</div>
+</div>
+</div>
+<div class="slide-right">
+<img src="https://readdy.ai/api/search-image?query=modern%20developer%20workspace%20with%20dual%20monitors%2C%20mechanical%20keyboard%2C%20stylish%20desk%20lamp%2C%20plants%2C%20organized%20cables%2C%20purple%20ambient%20lighting%2C%20professional%20coding%20setup%2C%20clean%20minimal%20design&width=600&height=400&seq=dev-setup&orientation=landscape"
+alt="Development Setup" class="rounded-2xl shadow-2xl w-full">
+</div>
+</div>
+
+<div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+<i class="ri-firefox-line text-3xl text-white"></i>
+</div>
+<h4 class="font-bold mb-2">Firefox Dev</h4>
+<p class="text-sm opacity-70">Debugging & testing</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center">
+<i class="ri-figma-line text-3xl text-white"></i>
+</div>
+<h4 class="font-bold mb-2">Figma</h4>
+<p class="text-sm opacity-70">UI/UX Design</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
+<i class="ri-docker-line text-3xl text-white"></i>
+</div>
+<h4 class="font-bold mb-2">Docker</h4>
+<p class="text-sm opacity-70">Containerization</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center">
+<i class="ri-slack-line text-3xl text-white"></i>
+</div>
+<h4 class="font-bold mb-2">Slack</h4>
+<p class="text-sm opacity-70">Team Communication</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center">
+<i class="ri-notion-line text-3xl text-white"></i>
+</div>
+<h4 class="font-bold mb-2">Notion</h4>
+<p class="text-sm opacity-70">Project Management</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center">
+<i class="ri-terminal-line text-3xl text-white"></i>
+</div>
+<h4 class="font-bold mb-2">iTerm2</h4>
+<p class="text-sm opacity-70">Terminal Enhancement</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
+<i class="ri-database-line text-3xl text-white"></i>
+</div>
+<h4 class="font-bold mb-2">Postman</h4>
+<p class="text-sm opacity-70">API Testing</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
+<i class="ri-palette-line text-3xl text-white"></i>
+</div>
+<h4 class="font-bold mb-2">Adobe CC</h4>
+<p class="text-sm opacity-70">Creative Suite</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="code" class="py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-6xl md:text-7xl font-bold text-center mb-24 gradient-text slide-up">Code Quality & Standards</h2>
+<div class="grid md:grid-cols-2 gap-16 items-center mb-20">
+<div class="slide-left">
+<h3 class="text-4xl font-bold mb-8 gradient-text">Clean Code Philosophy</h3>
+<p class="text-xl mb-8 opacity-80 leading-relaxed">
+I believe in writing code that is not just functional, but beautiful, maintainable, and scalable. 
+Every line of code I write follows industry best practices and coding standards.
+</p>
+<div class="space-y-6">
+<div class="flex items-center">
+<div class="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mr-4"></div>
+<span class="text-lg">Readable and well-documented code</span>
+</div>
+<div class="flex items-center">
+<div class="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mr-4"></div>
+<span class="text-lg">Test-driven development (TDD)</span>
+</div>
+<div class="flex items-center">
+<div class="w-3 h-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mr-4"></div>
+<span class="text-lg">SOLID principles & design patterns</span>
+</div>
+<div class="flex items-center">
+<div class="w-3 h-3 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mr-4"></div>
+<span class="text-lg">Performance optimization</span>
+</div>
+</div>
+</div>
+<div class="slide-right">
+<div class="code-preview">
+<div id="typing-code" class="typing-code"></div>
+</div>
+</div>
+</div>
+
+<div class="grid md:grid-cols-3 gap-8">
+<div class="glass p-8 rounded-2xl text-center scale-in hover:scale-105 transition-all">
+<div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center">
+<i class="ri-check-double-line text-4xl text-white"></i>
+</div>
+<h4 class="text-2xl font-bold mb-4 gradient-text">95%+</h4>
+<h3 class="text-xl font-bold mb-4">Test Coverage</h3>
+<p class="opacity-80">Comprehensive testing ensures reliability and reduces bugs in production.</p>
+</div>
+<div class="glass p-8 rounded-2xl text-center scale-in hover:scale-105 transition-all">
+<div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
+<i class="ri-speed-line text-4xl text-white"></i>
+</div>
+<h4 class="text-2xl font-bold mb-4 gradient-text">98+</h4>
+<h3 class="text-xl font-bold mb-4">Lighthouse Score</h3>
+<p class="opacity-80">Optimized performance, accessibility, and SEO for exceptional user experience.</p>
+</div>
+<div class="glass p-8 rounded-2xl text-center scale-in hover:scale-105 transition-all">
+<div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
+<i class="ri-shield-check-line text-4xl text-white"></i>
+</div>
+<h4 class="text-2xl font-bold mb-4 gradient-text">100%</h4>
+<h3 class="text-xl font-bold mb-4">Security Focus</h3>
+<p class="opacity-80">Following security best practices to protect your application and users.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="py-32 px-8">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-6xl md:text-7xl font-bold text-center mb-24 gradient-text slide-up">Tech Stack</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<i class="ri-reactjs-line text-6xl text-cyan-400 mb-4"></i>
+<p class="font-semibold">React</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<i class="ri-vuejs-line text-6xl text-green-400 mb-4"></i>
+<p class="font-semibold">Vue.js</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<i class="ri-nodejs-line text-6xl text-green-500 mb-4"></i>
+<p class="font-semibold">Node.js</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<i class="ri-database-2-line text-6xl text-blue-400 mb-4"></i>
+<p class="font-semibold">MongoDB</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<i class="ri-github-line text-6xl text-gray-400 mb-4"></i>
+<p class="font-semibold">Git</p>
+</div>
+<div class="glass p-6 rounded-2xl text-center scale-in hover:scale-110 transition-all">
+<i class="ri-cloud-line text-6xl text-purple-400 mb-4"></i>
+<p class="font-semibold">AWS</p>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="py-32 px-8">
+<div class="max-w-2xl mx-auto">
+<h2 class="text-6xl md:text-7xl font-bold text-center mb-24 gradient-text fade-in">Let's Work Together</h2>
+<div class="glass p-12 rounded-3xl fade-in">
+<form class="space-y-8">
+<div>
+<label class="block text-lg font-medium mb-3">Full Name</label>
+<input type="text" class="w-full p-4 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:border-primary focus:outline-none transition-colors text-lg"
+placeholder="Enter your full name">
+</div>
+<div>
+<label class="block text-lg font-medium mb-3">Email Address</label>
+<input type="email" class="w-full p-4 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:border-primary focus:outline-none transition-colors text-lg"
+placeholder="Enter your email address">
+</div>
+<div>
+<label class="block text-lg font-medium mb-3">Project Details</label>
+<textarea rows="6" class="w-full p-4 rounded-lg bg-white bg-opacity-10 border border-white border-opacity-20 focus:border-primary focus:outline-none transition-colors resize-none text-lg"
+placeholder="Tell me about your project..."></textarea>
+</div>
+<button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white py-4 !rounded-button font-semibold glow-hover transition-all whitespace-nowrap text-xl">
+<i class="ri-send-plane-line mr-2"></i>Send Message
+</button>
+</form>
+</div>
+</div>
+</section>
+<footer class="py-20 px-8 border-t border-white border-opacity-10 bg-black bg-opacity-20">
+<div class="max-w-7xl mx-auto">
+<div class="grid md:grid-cols-4 gap-12 mb-12">
+<div class="md:col-span-2">
+<div class="font-['Pacifico'] text-3xl gradient-text mb-6">Vale Developer</div>
+<p class="text-lg opacity-80 mb-6 leading-relaxed max-w-md">
+Full Stack Developer passionate about creating exceptional digital experiences.
+Let's build something amazing together.
+</p>
+<div class="flex space-x-4">
+<a href="#" class="w-12 h-12 flex items-center justify-center bg-gradient-to-r from-primary to-secondary rounded-xl hover:scale-110 transition-all text-white">
+<i class="ri-github-fill text-xl"></i>
+</a>
+<a href="#" class="w-12 h-12 flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl hover:scale-110 transition-all text-white">
+<i class="ri-linkedin-fill text-xl"></i>
+</a>
+<a href="#" class="w-12 h-12 flex items-center justify-center bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-xl hover:scale-110 transition-all text-white">
+<i class="ri-twitter-fill text-xl"></i>
+</a>
+<a href="#" class="w-12 h-12 flex items-center justify-center bg-gradient-to-r from-red-500 to-red-600 rounded-xl hover:scale-110 transition-all text-white">
+<i class="ri-mail-fill text-xl"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-6 gradient-text">Quick Links</h4>
+<div class="space-y-3">
+<a href="#about" class="block opacity-80 hover:opacity-100 hover:text-primary transition-all">About Me</a>
+<a href="#services" class="block opacity-80 hover:opacity-100 hover:text-primary transition-all">Services</a>
+<a href="#projects" class="block opacity-80 hover:opacity-100 hover:text-primary transition-all">Portfolio</a>
+<a href="#blog" class="block opacity-80 hover:opacity-100 hover:text-primary transition-all">Blog</a>
+<a href="#contact" class="block opacity-80 hover:opacity-100 hover:text-primary transition-all">Contact</a>
+</div>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-6 gradient-text">Services</h4>
+<div class="space-y-3">
+<p class="opacity-80">Web Development</p>
+<p class="opacity-80">UI/UX Design</p>
+<p class="opacity-80">API Integration</p>
+<p class="opacity-80">Consulting</p>
+<p class="opacity-80">Code Review</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white border-opacity-10 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="opacity-60 text-sm mb-4 md:mb-0">© 2025 Vale Developer. All rights reserved.</p>
+<div class="flex space-x-6 text-sm">
+<a href="#" class="opacity-60 hover:opacity-100 transition-opacity">Privacy Policy</a>
+<a href="#" class="opacity-60 hover:opacity-100 transition-opacity">Terms of Service</a>
+<a href="#" class="opacity-60 hover:opacity-100 transition-opacity">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<div class="modal" id="projectModal">
+<div class="modal-content">
+<div class="modal-close" onclick="closeProjectModal()">&times;</div>
+<div class="project-screenshots" id="projectScreenshots"></div>
+</div>
+</div>
+
+<div class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+<i class="ri-arrow-up-line text-2xl"></i>
+</div>
+<script id="theme-toggle">
+function toggleTheme() {
+const body = document.body;
+body.classList.toggle('dark');
+body.classList.toggle('light');
+}
+</script>
+<script id="typewriter-effect">
+document.addEventListener('DOMContentLoaded', function() {
+const typewriter = document.getElementById('typewriter');
+const texts = [
+'Full Stack Web Developer',
+'Software Engineer',
+'UI/UX Designer',
+'Problem Solver'
+];
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+function type() {
+const currentText = texts[textIndex];
+if (isDeleting) {
+typewriter.textContent = currentText.substring(0, charIndex - 1);
+charIndex--;
+} else {
+typewriter.textContent = currentText.substring(0, charIndex + 1);
+charIndex++;
+}
+let typeSpeed = isDeleting ? 50 : 100;
+if (!isDeleting && charIndex === currentText.length) {
+typeSpeed = 2000;
+isDeleting = true;
+} else if (isDeleting && charIndex === 0) {
+isDeleting = false;
+textIndex = (textIndex + 1) % texts.length;
+typeSpeed = 500;
+}
+setTimeout(type, typeSpeed);
+}
+type();
+});
+</script>
+<script id="mobile-menu">
+function toggleMobileMenu() {
+const mobileMenu = document.querySelector('.mobile-menu');
+const hamburger = document.querySelector('.hamburger');
+mobileMenu.classList.toggle('active');
+hamburger.classList.toggle('active');
+}
+</script>
+<script id="scroll-animations">
+document.addEventListener('DOMContentLoaded', function() {
+const fadeElements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right, .scale-in, .process-step');
+const skillBars = document.querySelectorAll('.skill-bar');
+const navbar = document.getElementById('navbar');
+const scrollToTopBtn = document.getElementById('scrollToTop');
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+if (entry.target.classList.contains('skill-card')) {
+const skillBar = entry.target.querySelector('.skill-bar');
+if (skillBar) {
+setTimeout(() => {
+skillBar.classList.add('animate');
+}, 300);
+}
+}
+}
+});
+}, { threshold: 0.1 });
+fadeElements.forEach(el => observer.observe(el));
+
+window.addEventListener('scroll', function() {
+const scrolled = window.pageYOffset;
+const heroHeight = document.getElementById('home').offsetHeight;
+
+if (scrolled > heroHeight - 100) {
+navbar.classList.add('nav-scrolled');
+navbar.classList.remove('nav-hero');
+} else {
+navbar.classList.remove('nav-scrolled');
+navbar.classList.add('nav-hero');
+}
+
+if (scrolled > 500) {
+scrollToTopBtn.classList.add('visible');
+} else {
+scrollToTopBtn.classList.remove('visible');
+}
+});
+});
+
+function scrollToTop() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+}
+</script>
+<script id="smooth-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const navLinks = document.querySelectorAll('a[href^="#"]');
+navLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').substring(1);
+const targetElement = document.getElementById(targetId);
+if (targetElement) {
+targetElement.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+});
+</script>
+<script id="testimonial-carousel">
+let currentTestimonial = 0;
+const testimonials = [
+{
+text: "Vale delivered an exceptional e-commerce platform that exceeded our expectations. Her attention to detail and technical expertise are outstanding.",
+name: "Michael Johnson",
+title: "CEO, RetailTech",
+image: "https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20middle-aged%20businessman%20in%20a%20suit%2C%20confident%20expression%2C%20corporate%20environment%20background%2C%20high%20quality%20portrait%20photography&width=150&height=150&seq=client-1&orientation=squarish"
+},
+{
+text: "Working with Vale was a pleasure. She transformed our complex requirements into a beautiful, functional application that our users love.",
+name: "Sarah Chen",
+title: "Product Manager, InnovateLab",
+image: "https://readdy.ai/api/search-image?query=professional%20headshot%20of%20an%20asian%20businesswoman%20with%20short%20hair%2C%20wearing%20a%20blazer%2C%20modern%20office%20background%2C%20confident%20smile%2C%20high%20quality%20portrait&width=150&height=150&seq=client-2&orientation=squarish"
+},
+{
+text: "Vale's expertise in both frontend and backend development made our project seamless. Highly recommend her for any web development needs.",
+name: "David Martinez",
+title: "CTO, StartupHub",
+image: "https://readdy.ai/api/search-image?query=professional%20headshot%20of%20a%20hispanic%20male%20executive%20with%20beard%2C%20wearing%20casual%20business%20attire%2C%20tech%20startup%20office%20background%2C%20friendly%20expression&width=150&height=150&seq=client-3&orientation=squarish"
+}
+];
+const projectData = {
+ecommerce: {
+title: "E-commerce Platform",
+screenshots: [
+{
+url: "https://readdy.ai/api/search-image?query=modern%20e-commerce%20homepage%20with%20hero%20banner%2C%20featured%20products%20grid%2C%20shopping%20categories%2C%20clean%20white%20background%2C%20professional%20web%20design%2C%20purple%20accent%20colors&width=800&height=600&seq=ecom-home&orientation=landscape",
+title: "Homepage",
+description: "Clean and modern homepage with featured products and categories"
+},
+{
+url: "https://readdy.ai/api/search-image?query=product%20detail%20page%20with%20large%20product%20images%2C%20add%20to%20cart%20button%2C%20product%20specifications%2C%20customer%20reviews%20section%2C%20responsive%20design%2C%20professional%20e-commerce%20layout&width=800&height=600&seq=ecom-product&orientation=landscape",
+title: "Product Details",
+description: "Detailed product page with image gallery and specifications"
+},
+{
+url: "https://readdy.ai/api/search-image?query=shopping%20cart%20checkout%20page%20with%20order%20summary%2C%20payment%20form%2C%20shipping%20options%2C%20secure%20checkout%20process%2C%20modern%20UI%20design%20with%20purple%20accents&width=800&height=600&seq=ecom-checkout&orientation=landscape",
+title: "Checkout Process",
+description: "Secure and user-friendly checkout experience"
+}
+]
+},
+taskmanager: {
+title: "Task Management App",
+screenshots: [
+{
+url: "https://readdy.ai/api/search-image?query=kanban%20board%20interface%20with%20task%20cards%2C%20drag%20and%20drop%20columns%2C%20project%20dashboard%2C%20team%20collaboration%20features%2C%20modern%20task%20management%20UI%20with%20colorful%20cards&width=800&height=600&seq=task-kanban&orientation=landscape",
+title: "Kanban Board",
+description: "Intuitive drag-and-drop task management interface"
+},
+{
+url: "https://readdy.ai/api/search-image?query=project%20dashboard%20with%20charts%2C%20progress%20bars%2C%20team%20member%20avatars%2C%20upcoming%20deadlines%2C%20task%20statistics%2C%20modern%20analytics%20interface%20design&width=800&height=600&seq=task-dashboard&orientation=landscape",
+title: "Project Dashboard",
+description: "Comprehensive project overview and analytics"
+},
+{
+url: "https://readdy.ai/api/search-image?query=team%20collaboration%20interface%20with%20chat%20messages%2C%20file%20sharing%2C%20member%20list%2C%20notification%20center%2C%20real-time%20updates%2C%20professional%20team%20management%20UI&width=800&height=600&seq=task-team&orientation=landscape",
+title: "Team Collaboration",
+description: "Real-time team communication and file sharing"
+}
+]
+},
+analytics: {
+title: "Analytics Dashboard",
+screenshots: [
+{
+url: "https://readdy.ai/api/search-image?query=analytics%20dashboard%20with%20colorful%20charts%2C%20line%20graphs%2C%20bar%20charts%2C%20KPI%20metrics%2C%20data%20visualization%20interface%2C%20modern%20business%20intelligence%20design&width=800&height=600&seq=analytics-main&orientation=landscape",
+title: "Main Dashboard",
+description: "Comprehensive data visualization and KPI tracking"
+},
+{
+url: "https://readdy.ai/api/search-image?query=detailed%20analytics%20report%20with%20tables%2C%20filters%2C%20date%20range%20selector%2C%20export%20options%2C%20professional%20data%20analysis%20interface%2C%20charts%20and%20graphs&width=800&height=600&seq=analytics-reports&orientation=landscape",
+title: "Detailed Reports",
+description: "In-depth reporting with filtering and export capabilities"
+},
+{
+url: "https://readdy.ai/api/search-image?query=real-time%20analytics%20interface%20with%20live%20data%20updates%2C%20notification%20alerts%2C%20monitoring%20dashboard%2C%20system%20health%20metrics%2C%20modern%20monitoring%20UI&width=800&height=600&seq=analytics-live&orientation=landscape",
+title: "Real-time Monitoring",
+description: "Live data monitoring and alert management"
+}
+]
+}
+};
+function openProjectModal(projectKey) {
+const modal = document.getElementById('projectModal');
+const screenshotsContainer = document.getElementById('projectScreenshots');
+const project = projectData[projectKey];
+if (!project) return;
+screenshotsContainer.innerHTML = project.screenshots.map(screenshot => `
+<div class="screenshot-item">
+<img src="${screenshot.url}" alt="${screenshot.title}" loading="lazy">
+<h4>${screenshot.title}</h4>
+<p>${screenshot.description}</p>
+</div>
+`).join('');
+modal.classList.add('active');
+document.body.style.overflow = 'hidden';
+}
+function closeProjectModal() {
+const modal = document.getElementById('projectModal');
+modal.classList.remove('active');
+document.body.style.overflow = 'auto';
+}
+document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('click', function(e) {
+if (e.target.id === 'projectModal') {
+closeProjectModal();
+}
+});
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape') {
+closeProjectModal();
+}
+});
+});
+function showTestimonial(index) {
+const container = document.querySelector('.testimonial-container');
+const dots = document.querySelectorAll('.testimonial-dot');
+currentTestimonial = index;
+const testimonial = testimonials[index];
+container.innerHTML = `
+<div class="testimonial-card active glass p-8 rounded-2xl text-center">
+<div class="w-16 h-16 mx-auto mb-6 rounded-full overflow-hidden">
+<img src="${testimonial.image}" alt="Client" class="w-full h-full object-cover">
+</div>
+<p class="text-lg mb-6 opacity-90">"${testimonial.text}"</p>
+<h4 class="font-bold">${testimonial.name}</h4>
+<p class="opacity-70">${testimonial.title}</p>
+</div>
+`;
+dots.forEach((dot, i) => {
+dot.style.opacity = i === index ? '1' : '0.3';
+});
+}
+document.addEventListener('DOMContentLoaded', function() {
+setInterval(() => {
+currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+showTestimonial(currentTestimonial);
+}, 5000);
+
+const codeElement = document.getElementById('typing-code');
+const codeSnippet = `// React Component with Hooks
+import React, { useState, useEffect } from 'react';
+
+const UserProfile = ({ userId }) => {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await fetch(\`/api/users/\${userId}\`);
+        const userData = await response.json();
+        setUser(userData);
+      } catch (error) {
+        console.error('Error fetching user:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUser();
+  }, [userId]);
+
+  if (loading) return <div>Loading...</div>;
+
+  return (
+    <div className="user-profile">
+      <h2>{user?.name}</h2>
+      <p>{user?.email}</p>
+    </div>
+  );
+};
+
+export default UserProfile;`;
+
+  let i = 0;
+  function typeCode() {
+    if (i < codeSnippet.length) {
+      codeElement.textContent += codeSnippet.charAt(i);
+      i++;
+      setTimeout(typeCode, 50);
+    }
+  }
+
+  const codeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(typeCode, 1000);
+        codeObserver.unobserve(entry.target);
+      }
+    });
+  });
+
+  if (codeElement) {
+    codeObserver.observe(codeElement);
+  }
+});
+</script>
+</body>
+</html>

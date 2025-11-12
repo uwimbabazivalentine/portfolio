@@ -1,0 +1,21 @@
+{
+  "name": "Uwimbabazi Valentine Portfolio",
+  "short_name": "Valentine Dev",
+  "description": "Portfolio of Uwimbabazi Valentine, a Full Stack Web & Software Developer.",
+  "start_url": "/portfolio/",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#a855f7",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
